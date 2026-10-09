@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitScope — GitHub Profile Viewer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="app-shell">
+
+        <header class="topbar">
+            <a href="#" class="brand" id="home-link" aria-label="GitScope home">
+                <span class="brand-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/>
+                    </svg>
+                </span>
+                <span class="brand-name">gitscope<span class="brand-dot">.</span></span>
+            </a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    DEVELOPER INSIGHTS
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <h1>Explore the people<br>behind the <span>code.</span></h1>
+
+                <p class="hero-description">
+                    Discover GitHub profiles, explore repositories, and get a
+                    quick look at a developer's open-source journey.
+                </p>
+
+                <form id="search-form" class="search-form">
+                    <div class="search-input-wrap">
+                        <svg class="search-icon" viewBox="0 0 24 24"
+                             fill="none" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"
+                                    stroke="currentColor" stroke-width="1.8"/>
+                            <path d="m16 16 4 4" stroke="currentColor"
+                                  stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+
+                        <input
+                            id="username"
+                            type="text"
+                            placeholder="Enter a GitHub username..."
+                            autocomplete="off"
+                            spellcheck="false"
+                            aria-label="GitHub username"
+                            required
+                        >
+
+                        <span class="input-hint">GITHUB USERNAME</span>
+                    </div>
+
+                    <button id="search-button" type="submit" class="search-button">
+                        <span class="button-text">Explore profile</span>
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M5 12h14m-6-6 6 6-6 6"
+                                  stroke="currentColor" stroke-width="1.8"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="example-row">
+                    <span>TRY AN EXAMPLE</span>
+                    <button class="example-chip" type="button" data-username="torvalds">
+                        torvalds
+                    </button>
+                    <button class="example-chip" type="button" data-username="gaearon">
+                        gaearon
+                    </button>
+                    <button class="example-chip" type="button" data-username="sindresorhus">
+                        sindresorhus
+                    </button>
+                    <button class="example-chip" type="button" data-username="iteratequickly">
+                        iteratequickly
+                    </button>
+                </div>
+
+                <div id="message" class="message" role="status" aria-live="polite"></div>
+            </section>
+
+            <section id="welcome" class="welcome-section">
+                <div class="welcome-icon">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"
+                                stroke="currentColor" stroke-width="1.5"/>
+                        <path d="m16 16 4 4M8 11h6M11 8v6"
+                              stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <h2>Your next discovery starts here.</h2>
+                <p>Enter a GitHub username above to explore their profile and repositories.</p>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon purple">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4"
+                                        stroke="currentColor" stroke-width="1.6"/>
+                                <path d="M5 21v-2a7 7 0 0 1 14 0v2"
+                                      stroke="currentColor" stroke-width="1.6"
+                                      stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Developer profiles</h3>
+                        <p>View profile details, followers, and activity basics.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon blue">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"
+                                      stroke="currentColor" stroke-width="1.6"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Repository explorer</h3>
+                        <p>Browse public projects, languages, stars, and forks.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon pink">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 3v18M3 12h18"
+                                      stroke="currentColor" stroke-width="1.6"
+                                      stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="9"
+                                        stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                        </div>
+                        <h3>Quick insights</h3>
+                        <p>Get an at-a-glance view of a developer's public work.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="results" class="results-section" hidden>
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">
+                            <span class="eyebrow-line"></span>
+                            PROFILE OVERVIEW
+                            <span class="eyebrow-line"></span>
+                        </div>
+                        <h2>Developer profile</h2>
+                    </div>
+
+                    <a id="github-profile-link" class="outline-link"
+                       href="#" target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <article id="profile-card" class="profile-card">
+                    <div class="profile-top">
+                        <img id="avatar" class="avatar" src="" alt="GitHub avatar">
+
+                        <div class="profile-identity">
+                            <h2 id="profile-name">Developer</h2>
+                            <a id="profile-login" class="profile-login"
+                               href="#" target="_blank"
+                               rel="noopener noreferrer">@username</a>
+                            <p id="profile-bio" class="profile-bio"></p>
+                        </div>
+                    </div>
+
+                    <div id="profile-details" class="profile-details"></div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">REPOSITORIES</span>
+                            <strong id="stat-repos">0</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">FOLLOWERS</span>
+                            <strong id="stat-followers">0</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">FOLLOWING</span>
+                            <strong id="stat-following">0</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">PUBLIC GISTS</span>
+                            <strong id="stat-gists">0</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="section-heading repo-heading">
+                    <div>
+                        <div class="eyebrow">
+                            <span class="eyebrow-line"></span>
+                            OPEN-SOURCE WORK
+                            <span class="eyebrow-line"></span>
+                        </div>
+                        <h2>Repositories <span id="repo-count" class="count-badge">0</span></h2>
+                    </div>
+                </div>
+
+                <div id="repositories" class="repositories-grid"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>Built for curious developers.</span>
+            <span>Powered by the GitHub API</span>
+        </footer>
+    </div>
+</body>
+</html>
+

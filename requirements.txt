@@ -1,0 +1,4 @@
+Eel>=0.16.0
+PyGithub>=2.3.0
+Pillow>=10.0.0
+requests>=2.31.0
