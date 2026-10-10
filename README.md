@@ -4,8 +4,18 @@
   <strong>A sleek desktop GitHub Profile Viewer built with Python, Eel, and PyGithub.</strong>
 </p>
 
-<p align="center">
+<p>
   Explore GitHub profiles, view public repositories, and discover developer stats through a clean, modern interface.
+</p>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/iteratequickly/GitScope/v1.0/total.svg?label=Downloads)](https://github.com/iteratequickly/GitScope/releases/tag/v1.0)
+[![GitHub Release](https://img.shields.io/github/v/release/iteratequickly/GitScope)](https://github.com/iteratequickly/GitScope/releases)
+[![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)](https://github.com/iteratequickly/GitScope)
+[![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://www.python.org/)
+
+<p align="center">
+  <img src="https://github.com/iteratequickly/GitScope/blob/main/assets/banner.png" alt="GitScope Preview" width="800">
 </p>
 
 ---
@@ -28,7 +38,7 @@ The app combines a Python backend with a web-based interface, powered by Eel and
 * 🔗 **Direct Links:** Open GitHub profiles and repositories.
 * 🏠 **Quick Reset:** Click the GitScope logo to clear the current search and return to the home screen.
 * 🎨 **Modern Interface:** Use a dark-themed interface with responsive layouts.
-* ⚡ **Python Backend:** Retrieve GitHub information using PyGithub.
+* ⚡ **Python Backend:** Retrieve GitHub information using PyGithub. 
 
 ## 🛠️ Built With
 
@@ -54,8 +64,8 @@ The app combines a Python backend with a web-based interface, powered by Eel and
 
 1. **Download the latest release**
 
-   * Visit the 
-   * Download the `` file.
+   * Visit the [Release Page](https://github.com/iteratequickly/GitScope/releases/tag/v1.0).
+   * Download the `GitScope-v1.0.zip` file.
 
 2. **Extract the ZIP file**
 
